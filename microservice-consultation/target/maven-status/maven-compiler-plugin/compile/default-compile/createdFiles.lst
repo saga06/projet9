@@ -1,0 +1,12 @@
+com\oc\wildadventures\controller\CategoryController.class
+com\oc\wildadventures\exceptions\CategoryNotFoundException.class
+com\oc\wildadventures\dao\AdventureDao.class
+com\oc\wildadventures\model\Category.class
+com\oc\wildadventures\dao\CategoryDao.class
+com\oc\wildadventures\model\Picture.class
+com\oc\wildadventures\exceptions\AdventureNotFoundException.class
+com\oc\wildadventures\model\Adventure.class
+com\oc\wildadventures\WildadventuresApplication.class
+com\oc\wildadventures\configuration\SwaggerConfig.class
+com\oc\wildadventures\controller\AdventureController.class
+com\oc\wildadventures\model\Place.class

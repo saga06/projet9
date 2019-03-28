@@ -1,0 +1,13 @@
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\controller\CategoryController.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\model\Adventure.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\exceptions\AdventureNotFoundException.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\configuration\SwaggerConfig.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\model\Picture.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\controller\AdventureController.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\WildadventuresApplication.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\exceptions\CategoryNotFoundException.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\dao\AdventureDao.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\model\Category.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\dao\AdventureDaoImpl.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\model\Place.java
+C:\Users\sgahama\eclipse-workspace\finalp9\wildadventure\microservice-consultation\src\main\java\com\oc\wildadventures\dao\CategoryDao.java
