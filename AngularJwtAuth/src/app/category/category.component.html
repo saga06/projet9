@@ -1,0 +1,6 @@
+<div>
+  <p> Nom {{category.name}} </p>
+  <div *ngFor="let adventure of adventures">
+    <p (click)=navigateTodDetail(adventure.adventure_id)>{{adventure.name}}</p>
+  </div>
+</div>

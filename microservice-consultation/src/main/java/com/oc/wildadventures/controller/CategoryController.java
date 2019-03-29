@@ -46,7 +46,7 @@ public class CategoryController {
         return category;
     }
 
-    @PostMapping(value = "/categories")
+    @PostMapping(value = "/do_category")
     /*test that the parameter respects the pattern declared in the bean (lenght, regex etc...) => @Valid*/
     public ResponseEntity<Void> addCategory(@Valid @RequestBody Category category) {
 

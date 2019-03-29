@@ -7,6 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { PmComponent } from './pm/pm.component';
 import { AdminComponent } from './admin/admin.component';
+import {AllAdventureComponent} from './all-adventure/all-adventure.component';
+import {AdventureComponent} from './adventure/adventure.component';
+import {AllCategoryComponent} from './all-category/all-category.component';
+import {CategoryComponent} from './category/category.component';
 
 const routes: Routes = [
     {
@@ -14,7 +18,7 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'user',
+        path: 'user/:username',
         component: UserComponent
     },
     {
@@ -37,7 +41,21 @@ const routes: Routes = [
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
-    }
+    },
+  {path: 'aventures', component: AllAdventureComponent},
+  {path: 'aventure/:id', component: AdventureComponent},
+  {path: 'categories', component: AllCategoryComponent},
+  {path: 'categories/:id', component: CategoryComponent}
+
+
+  /*{path: '', component: HomeComponent},
+  {path: 'login', component: AuthentificationComponent},
+  {path: 'categorie', component: CategoryComponent},
+  {path: 'categories', component: AllCategoryComponent},
+  {path: 'commande', component: OrderComponent},
+  {path: 'nouvelle-commande', component: CreateOrderComponent},
+  {path: 'commandes', component: AllOrderComponent},
+  {path: 'mon-compte', component: AccountComponent}*/
 ];
 
 @NgModule({

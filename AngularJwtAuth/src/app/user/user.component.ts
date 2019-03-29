@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
+import {User} from '../model/User';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -7,19 +9,14 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  board: string;
-  errorMessage: string;
+  user: User;
+  username: string;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.userService.getUserBoard().subscribe(
-      data => {
-        this.board = data;
-      },
-      error => {
-        this.errorMessage = `${error.status}: ${JSON.parse(error.error).message}`;
-      }
-    );
+    this.user = new User;
+    this.username = this.route.snapshot.paramMap.get('username');
+    this.userService.getUserBoard(this.username).subscribe( user => this.user = (user as User));
   }
 }

@@ -12,7 +12,14 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { PmComponent } from './pm/pm.component';
 
+
+
 import { httpInterceptorProviders } from './auth/auth-interceptor';
+import {AllAdventureComponent} from './all-adventure/all-adventure.component';
+import {AdventureComponent} from './adventure/adventure.component';
+import { AdventuresByCategoryComponent } from './adventures-by-category/adventures-by-category.component';
+import { CategoryComponent } from './category/category.component';
+import { AllCategoryComponent } from './all-category/all-category.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,12 @@ import { httpInterceptorProviders } from './auth/auth-interceptor';
     RegisterComponent,
     HomeComponent,
     AdminComponent,
-    PmComponent
+    AllAdventureComponent,
+    AdventureComponent,
+    PmComponent,
+    AdventuresByCategoryComponent,
+    CategoryComponent,
+    AllCategoryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WildAdventure</title>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-2/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Application WildAdventure</h1>
+    <div class="row">
+        <div th:each="adventure : ${adventures}" class="col-md-4 my-1">
+            <a th:href="@{|http://localhost:8080/adventures/${adventure.adventure_id}|}" >
+                <div th:each="picture : ${adventure.pictures}" class="col-md-4 my-1">
+                    <img th:src="${picture.path}"  class="card-img-top" />
+                </div>
+                <p th:text= "${adventure.name}"></p>
+            </a>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div th:each="adventure : ${adventures}" class="col-md-4 my-1">
+            <a th:href="@{|/adventures/${adventure.adventure_id}|}" >
+                <img th:src="${adventure.pictures}"  class="card-img-top" />
+                <p th:text= "${adventure.name}"></p>
+            </a>
+        </div>
+    </div>-->
+</div>
+<script type="text/javascript" src="webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+</body>
+</html>

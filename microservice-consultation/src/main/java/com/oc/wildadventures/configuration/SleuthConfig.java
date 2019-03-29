@@ -1,3 +1,5 @@
+/*
+
 package com.oc.wildadventures.configuration;
 
 import brave.sampler.Sampler;
@@ -11,3 +13,4 @@ public class SleuthConfig {
         return Sampler.ALWAYS_SAMPLE;
     }
 }
+*/
