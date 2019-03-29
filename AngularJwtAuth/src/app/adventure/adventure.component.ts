@@ -4,6 +4,7 @@ import {AdventureService} from '../services/adventure.service';
 import {ActivatedRoute} from '@angular/router';
 import {Observable} from 'rxjs';
 import {CommentService} from '../services/comment.service';
+import {HttpErrorResponse} from '@angular/common/http';
 
 
 @Component({
@@ -15,6 +16,9 @@ export class AdventureComponent implements OnInit {
   adventure: Adventure;
   comments: Observable<Comment>;
   id: any;
+  addCommentStatus: Boolean;
+  comment: Comment;
+  errorMessage: string;
 
   constructor(private service: AdventureService, private commentService: CommentService, private route: ActivatedRoute) { }
 
@@ -23,6 +27,8 @@ export class AdventureComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id');
     this.getById();
     this.getComments();
+    this.addCommentStatus = false;
+    this.comment = new Comment();
   }
   getById() {
     this.service.getByID(this.id).subscribe(adventure => this.adventure = (adventure as Adventure));
@@ -33,5 +39,18 @@ export class AdventureComponent implements OnInit {
       data => {this.comments = data;
       });
   }
+
+  newComment(model: Comment) {
+    this.commentService.addComment(this.comment).subscribe((data: any) => {
+      this.ngOnInit();
+    }, (error: HttpErrorResponse) => {
+      this.errorMessage
+        = error.error.message;
+    });
+  }
+
+  addComment(): void {
+    this.addCommentStatus = true;
+}
 
 }

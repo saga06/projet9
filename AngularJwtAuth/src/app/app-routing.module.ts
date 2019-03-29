@@ -18,7 +18,7 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'user/:username',
+        path: 'user',
         component: UserComponent
     },
     {

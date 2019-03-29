@@ -12,4 +12,7 @@ export class CommentService {
   getCommentByAdventure(adventure_id: string): Observable<any> {
     return this.http.get(configURLApi.commentsByAdventure(adventure_id));
   }
+  addComment(comment: Comment) {
+    return this.http.post(configURLApi.createComment, comment);
+  }
 }

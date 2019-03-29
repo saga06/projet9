@@ -26,12 +26,36 @@
           <p>{{comment.commentaire}}</p>
           <small class="text-muted">{{comment.dateComment}}</small>
           <hr>
-          <a href="#" class="btn btn-success">Leave a Review</a>
         </div>
+      </div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <button *ngIf = "addCommentStatus === false" (click) = "addComment()" class ="btn btn-success" id="modifier" type = "submit">Commenter</button>
+            </div>
+
+        </div>
+
+      <div id="modifForm" class="row" *ngIf = "addCommentStatus === true">
+
+        <div class="col-md-12 form-group">
+          <label for="">Description </label> <input type="text"
+                                                         class="form-control" name="commentaire" required
+                                                         [(ngModel)]="comment.commentaire" #commentaire="ngModel"
+                                                         textDirective="commentaire" autocomplete="off" notEmpty="lastName"
+                                                         placeholder="Entrez votre commentaire" />
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <button *ngIf = "addCommentStatus === true" (click) = "newComment()" class ="btn btn-success" id="valider" type = "submit">Valider</button>
+      </div>
+      <div class="col-xs-4">
+        <button *ngIf = "addCommentStatus === true" (click) = "ngOnInit()" class ="btn btn-success" id="annuler" type = "submit">Annuler</button>
+      </div>
       </div>
       <!-- /.card -->
 
-    </div>
+
     <!-- /.col-lg-9 -->
 
   </div>
